@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/Adv/ping.png</ImageUrl>
+    <NavigateUrl>http://www.asp.net</NavigateUrl>
+    <AlternateText>Strona główna ASP.NET </AlternateText>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/Adv/mysz.jpg</ImageUrl>
+    <NavigateUrl>http://www.codeplex.com</NavigateUrl>
+    <AlternateText>Projekty OpenSource - CodePlex </AlternateText>
+  </Ad>
+</Advertisements>

@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SzablonStrony.master.cs" Inherits="SzablonStrony" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Adwenture Works</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="strona">
+            <div id="naglowek">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/AWlogo.jpg" />
+                <div id="menu">menu</div>
+                <div id="obszarLogowania">zaloguj</div>    
+            </div>
+            <div id="tresc">
+                <div id="pierwszyObszarBoczny">lewa</div>
+                <div id="drugiObszarBoczny">prawa</div>
+                <div id="obszarRoboczy">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>

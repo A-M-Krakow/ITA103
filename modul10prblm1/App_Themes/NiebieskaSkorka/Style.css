@@ -1,0 +1,75 @@
+﻿body
+{
+    font-family: Verdana;
+    font-size: 8pt;
+    color: #000033;
+    background-color: #FFFFFF;
+    margin: 0px;
+}
+#pierwszyObszarBoczny
+{
+    float: left;
+    width: 200px;
+    height: 300px;
+}
+
+#drugiObszarBoczny
+{
+    float: right;
+    width: 200px;
+    height: 300px;
+}
+
+#menu 
+{
+    background-color: #55BBff;
+    font-size: 7.5pt;
+}
+
+#obszarLogowania 
+{
+    text-align: right;
+    background-color: #C3DBEA;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px; }
+ 
+#obszarRoboczy 
+{
+    background-color: #eee;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 200px;
+    margin-right: 200px; }
+    
+.ElementMenuNadrzednego
+{
+    color: #000033;
+    font-weight: bold;
+    padding: 3px 10px;
+}
+.ElementMenuRozwijanego
+{
+    background: #F5F5F5;
+    color: #000033;
+    padding: 3px 10px;
+}
+.ZaznaczonyElementMenu
+{
+    background: #000033;
+    color: White;
+}
+
+.OknoProduktow
+{
+background-color: #C3DBEA;
+border-style: solid;
+border-color: #55BBFF;
+margin: 5px auto 0px auto;
+width: 120px;
+}

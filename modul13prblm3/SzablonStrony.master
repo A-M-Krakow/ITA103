@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SzablonStrony.master.cs" Inherits="SzablonStrony" %>
+
+<%@ Register src="Kontrolki/Kategorie.ascx" tagname="Kategorie" tagprefix="uc1" %>
+
+<%@ Register src="Kontrolki/NoweProdukty.ascx" tagname="NoweProdukty" tagprefix="uc2" %>
+
+<%@ Register src="Kontrolki/WybraneProdukty.ascx" tagname="WybraneProdukty" tagprefix="uc3" %>
+
+<%@ Register src="Kontrolki/licznik.ascx" tagname="licznik" tagprefix="uc4" %>
+
+<%@ Register src="Kontrolki/Reklama.ascx" tagname="Reklama" tagprefix="uc5" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Adwenture Works</title>
+    <link href="App_Themes/NiebieskaSkorka/Style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:WebPartManager ID="MenadzerWebPartow" runat="server">
+    </asp:WebPartManager>
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <div id="strona">
+            <div id="naglowek">
+                <br />
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/AWlogo.jpg" />
+                <div id="menu">
+                    <asp:Menu ID="glowneMenu" runat="server" DataSourceID="mapaSerwisu" 
+                        Orientation="Horizontal" RenderingMode="Table">
+                        <DynamicHoverStyle CssClass="ZaznaczonyElementMenu" />
+                        <DynamicMenuItemStyle CssClass="ElementMenuRozwijanego" />
+                        <StaticHoverStyle CssClass="ZaznaczonyElementMenu" />
+                        <StaticMenuItemStyle CssClass="ElementMenuNadrzednego" />
+                    </asp:Menu>
+                    <asp:SiteMapDataSource ID="mapaSerwisu" runat="server" 
+                        ShowStartingNode="False" />
+                </div>
+                <div id="obszarLogowania">
+                    &nbsp;<asp:LoginView ID="LoginView1" runat="server">
+                        <AnonymousTemplate>
+                            <a href="Zarejestruj.aspx">Zarejestruj</a>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Witaj,&nbsp; &nbsp;<asp:LoginName ID="LoginName1" runat="server" />
+&nbsp;|
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" 
+                        CssClass="LinkObszaruLogowania" LoginText="Zaloguj" 
+                        LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" LogoutText="Wyloguj" />
+                </div>    
+            </div>
+            <div id="tresc">
+                <div id="pierwszyObszarBoczny">
+                &nbsp;<asp:WebPartZone ID="PierwszyObszarWebPartow" runat="server">
+                        <ZoneTemplate>
+                            <uc1:Kategorie ID="Kategorie1" runat="server" />
+                              <uc3:WybraneProdukty ID="WybraneProdukty1" runat="server" />
+                            
+                        </ZoneTemplate>
+                        
+
+                    </asp:WebPartZone>
+                  
+                    
+                </div>
+                <div id="drugiObszarBoczny">
+                <asp:WebPartZone ID="DrugiObszarWebPartow" runat="server">
+                    <ZoneTemplate>
+                        <uc4:licznik ID="licznik1" runat="server" />
+                        <uc2:NoweProdukty ID="NoweProdukty1" runat="server" />
+                    </ZoneTemplate>
+                    </asp:WebPartZone>
+                    &nbsp;<uc5:Reklama ID="Reklama1" runat="server" />
+                   
+                </div>
+                <div id="obszarRoboczy">
+                    
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                       
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>
